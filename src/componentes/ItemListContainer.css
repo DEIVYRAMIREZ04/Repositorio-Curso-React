@@ -1,0 +1,14 @@
+.encabezado{
+    color: rgb(252, 246, 250);
+    font-size: 2em;
+    background-color: black;
+    opacity: 80%;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    padding: 7px;
+
+}
+.campaña{
+    font-size: 30px;
+}

@@ -9,14 +9,15 @@
     margin: 15px;
     border-radius: 10px;
     align-items: center;
+}
 
-    img {
+   .cremas img {
         border-radius: 10px;
     }
 
-    ;
+    
 
-    .boton {
+    .cremas .boton {
         background-color: rgb(240, 72, 6);
         color: black;
         width: 6rem;
@@ -25,11 +26,14 @@
         box-shadow: 7px 7px 7px black;
     }
 
-    ;
+    
+
+@media(max-width: 630px){
+    .cremas{
+        flex-direction: column;
+        gap: 5px;
+        img{
+            background-size: cover;
+        }
+    }
 }
-
-;
-
-
-
-;

@@ -6,7 +6,7 @@ const Productos = (props) => {
         <h1 className="titulo">{props.titulo}</h1>
         <div className="cremas">
             
-            <img src={props.cremas} alt="" />;
+            <img src={props.cremas} alt="" />
             <ul >
                 <li>{props.nombre}</li>
                 <li> {props.base}</li>

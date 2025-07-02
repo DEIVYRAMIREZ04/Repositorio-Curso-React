@@ -1,5 +1,5 @@
 import "./CarWidget.css";
-import carrito from '../assets/carrito2.png'
+import carrito from '../../assets/carrito2.png'
 const CarWidget = () => {
   return (
     <div >

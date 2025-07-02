@@ -1,7 +1,7 @@
 import './App.css';
-import NavBar from "./componentes/NavBar.jsx";
-import ItemListContainer from './componentes/ItemListContainer.jsx';
-import Productos from "./componentes/Productos.jsx";
+import NavBar from "./componentes/NavBar/NavBar";
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import Productos from "./componentes/products/Productos";
 import Cremas from "./assets/cremas.png";
 import Perfumes from "./assets/perfumes.png";
 import Piel from "./assets/piel.png";

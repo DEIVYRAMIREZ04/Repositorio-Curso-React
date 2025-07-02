@@ -1,6 +1,6 @@
-import "./navbar.css";
-import logoNatura from "../assets/logonaranja.png";
-import CarWidget from "./CarWidget";
+import "./NavBar.css";
+import logoNatura from "../../assets/logonaranja.png";
+import CarWidget from "../CarWidget/CarWidget";
 const NavBar = () => {
   return (
     <div className="navbar">

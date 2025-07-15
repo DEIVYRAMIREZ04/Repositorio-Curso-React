@@ -1,0 +1,13 @@
+.item-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    font-size: 0.9rem;
+    color: #d12929;
+    font-style: italic;
+    margin: 30px;
+    padding: 10px;
+   
+}

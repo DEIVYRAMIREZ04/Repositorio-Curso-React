@@ -1,15 +1,21 @@
-.encabezado{
-    color: rgb(252, 246, 250);
-    font-size: 2em;
-    background-color: black;
-    opacity: 80%;
-    border-radius: 10px;
-    margin: 10px;
-    text-align: center;
-    padding: 7px;
+.encabezado {
+    margin: 0;
+    font-size: 1.6rem;
 
 }
-.campaña{
-    font-size: 30px;
-    text-decoration:underline;
+
+.campaña {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    text-decoration: underline;
 }
+
+.itemlistcontainer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap :10px;
+}
+

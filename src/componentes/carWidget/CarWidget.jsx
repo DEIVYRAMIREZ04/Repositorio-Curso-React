@@ -1,11 +1,12 @@
 import "./CarWidget.css";
-import carrito from '../../assets/carrito2.png'
+import { TiShoppingCart } from "react-icons/ti";
+
 const CarWidget = () => {
   return (
     <div >
-        <img className='carrito'  src={carrito}  alt="carrito de compras" />
+        <TiShoppingCart  className="carrito"/>
     </div>
-  )
+  );
 };
 
 export default CarWidget;

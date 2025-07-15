@@ -1,26 +1,37 @@
 import './App.css';
-import NavBar from "./componentes/NavBar/NavBar";
+import Socialmedia from "./componentes/SocialMedia/SocialMedia";
+import { NavBar, NavBar2 } from "./componentes/NavBar/NavBar";
+import { ItemListWithSearch } from './componentes/itemList/ItemList';
+import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import Productos from "./componentes/products/Productos";
-import Cremas from "./assets/cremas.png";
-import Perfumes from "./assets/perfumes.png";
-import Piel from "./assets/piel.png";
-
 function App() {
-  const saludo = "Hola Mundo";
   return (
-    <div className='body'>
-      <div className='app-container'>
-        <NavBar/>
-      <ItemListContainer saludo={"Luz Norelia Suarez Tu Asesora Experta"} numero={10}/>
+    <BrowserRouter>
+      <div className='body'>
+
+        <div className='cuerpo'>
+          <div className='app-container' >
+            <NavBar />
+            <h2 className="encabezado">Luz Norelia Tu Asesora De Confianza</h2>
+            <h3 className="campaña">Campaña # 10</h3>
+          </div>
+          <div >
+            <NavBar2 />
+          </div>
+          <div >
+            <Routes>
+              <Route path="/" element={<ItemListWithSearch />} />
+              <Route path="/category/:category" element={<ItemListContainer />} />
+              <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+            </Routes>
+            <Socialmedia />
+          </div>
+
+        </div>
       </div>
-      <Productos titulo={" CUIDADO E HIDRATACION DE LA PIEL"} cremas={Cremas} nombre={"CREMAS"} 
-      base={"MANZANA / MARACUYA / PATAHUA"} precio={"$20.000 c/u"}/>
-      <Productos titulo={" DESPIERTA TUS SENTIDOS CON OLORES FANTASTICOS"} cremas={Perfumes} nombre={"PERFUMERIA"} 
-      base={"HUMOR / KAYAC / PITANGA"} precio={"$80.000 c/u"}/>
-      <Productos titulo={" QUE EL PASO DEL TIEMPO NO SE REFLEJE EN TI"} cremas={Piel} nombre={"MASCARILLAS"} 
-      base={"EXFOLIANTES / ANTIARRUGAS / ANTIMANCHAS"} precio={"$55.000 c/u"}/>
-    </div>
+    </BrowserRouter>
+
   )
 }
 

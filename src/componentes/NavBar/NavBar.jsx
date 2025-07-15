@@ -1,19 +1,47 @@
 import "./NavBar.css";
-import logoNatura from "../../assets/logonaranja.png";
-import CarWidget from "../CarWidget/CarWidget";
+import logoNatura from "../../assets/img-logo.png";
+import CarWidget from "../carWidget/CarWidget";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="navbar">
-        <img src={logoNatura} alt="logo" className="logo"/>
-   
-    <ul className="listanavbar">
-      <li>OFERTA DEL MES</li>
-      <li>ASESORIA PERSONALIZADA</li>
-      <li>QUIERES SER ASESORA</li>
-    </ul>
-    <CarWidget/>
-     </div>
+      <Link to="/">
+        <img src={logoNatura} alt="logo" className="logo" />
+      </Link>
+
+      <ul className="listanavbar">
+        <li className="list-N">
+          <Link to="/category/oferta-mes">
+            OFERTA DEL MES
+          </Link>
+        </li>
+        
+      </ul>
+
+      <CarWidget />
+    </div>
   )
 };
+const NavBar2 = () => {
+  return (
+    <ul className='nav2'>
+      <li className="cate">
+        <Link to="/category/cabello">
+          CABELLO
+        </Link>
+      </li>
+      <li className="cate">
+        <Link to="/category/cremas">
+          CREMAS
+        </Link>
+      </li>
+      <li className="cate">
+        <Link to="/category/perfumes">
+          PERFUMES
+        </Link>
+      </li>
+    </ul>
+  )
+}
 
-export default NavBar;
+export { NavBar, NavBar2 };

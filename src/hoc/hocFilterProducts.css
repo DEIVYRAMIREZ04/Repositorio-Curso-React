@@ -1,0 +1,7 @@
+.place::placeholder{
+    width: 100%;
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: orangered;
+}

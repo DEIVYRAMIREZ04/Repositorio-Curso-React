@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import { CardProvider } from './Context/CardContext';
 import Cart from './componentes/Cart/Cart';
-import Checkout from './componentes/checkOut/checkOut';
+import Checkout from './componentes/Checkout/Checkout';
 function App() {
   return (
     <BrowserRouter>

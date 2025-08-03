@@ -1,4 +1,4 @@
-import Item from "../item/item"
+import Item from "../Item/item"
 import "./ItemList2.css";
 import useProducts2 from "../../hoocks/useProduct";
 

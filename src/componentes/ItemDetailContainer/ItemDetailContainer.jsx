@@ -1,6 +1,6 @@
 import useProduct from "../../hoocks/useProduct.js";
 import Loading from "../Loading/Loading";
-import ItemDetail from "../itemDetail/itemDetail";
+import ItemDetail from "../ItemDetail/itemDetail"
 import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
   const { productId } =useParams();

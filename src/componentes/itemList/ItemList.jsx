@@ -1,4 +1,4 @@
-import Item from "../item/item"
+import Item from "../Item/item"
 import hocFilterProducts from "../../hoc/hocFilterProducts";
 import "./ItemList.css";
 import useProducts from "../../hoocks/useProduct";

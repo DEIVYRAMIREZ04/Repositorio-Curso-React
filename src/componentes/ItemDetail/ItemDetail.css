@@ -1,9 +1,10 @@
 .containerDetail {
+   
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  background-color: #fff0f6; /* fondo rosa pálido elegante */
+  background-color: #fff0f6; 
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -14,11 +15,12 @@
 
 /* Contenedor de la imagen */
 .imgDetailContainer {
+  
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #800080; /* morado elegante */
+  border: 3px solid #800080; 
   border-radius: 50%;
   background-color: white;
   padding: 1.5rem;

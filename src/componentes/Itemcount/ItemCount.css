@@ -1,0 +1,35 @@
+.itemcount{
+    background-color: aquamarine;
+     border: 3px solid purple;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 40%;
+}
+
+.count{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    background-color: rgb(255, 177, 255);
+    color : black;
+    border-radius: 10px;
+    border: 3px solid purple;
+    
+}
+
+.buton{
+    background-color: rgb(255, 177, 255);
+        border: 2px solid purple;
+        border-radius: 5px;
+
+}
+
+
+
+

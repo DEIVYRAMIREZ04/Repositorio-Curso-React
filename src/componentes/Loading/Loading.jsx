@@ -4,7 +4,7 @@ import "./Loading.css";
 const Loading = () => {
   return (
     <div className="loader" >
-         <ScaleLoader   color=" #ff764d"height={100} width={15} />
+         <ScaleLoader   color=" #65037eff"height={100} width={15} />
     </div>
   )
 }

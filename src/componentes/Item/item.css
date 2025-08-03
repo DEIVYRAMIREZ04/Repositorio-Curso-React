@@ -1,5 +1,5 @@
 .item-card {
-    background-color: rgb(123, 238, 238);
+    background-image: url("../../assets/maderaconramas1.png");
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -18,7 +18,7 @@
 }
 
 
-.contain-img{
+.contain-img {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -36,13 +36,15 @@
     transition: transform 0.3s ease;
     margin-top: 20px;
 }
+
 .img-item:hover {
     transform: scale(1.05);
 }
+
 .item-info {
 
-    background-color: #ff764d;
-   
+    background-color: rgb(255, 6, 201);
+
     border-radius: 0 0 20px 20px;
     padding: 10px;
     text-align: center;
@@ -68,7 +70,7 @@
     border: none;
     padding: 6px 12px;
     border-radius: 20px;
-    color: #ff764d;
+    color: rgb(255, 112, 212);
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -77,7 +79,6 @@
 }
 
 .info-button:hover {
-    background-color: #ffe6dd;
+    background-color: rgb(145, 255, 246);
+
 }
-
-

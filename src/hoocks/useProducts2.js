@@ -1,26 +1,41 @@
-import {useEffect, useState} from 'react'
-import { getProducts }from "../Data/products";
+import { useEffect, useState } from 'react'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import db from "../db/db.js"
 
+const useProducts2 = (category) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const getporoducts = async () => {
+    try {
+      const dataDb = await getDocs(collection(db, "products"))
+      console.log(dataDb)
+      const data = dataDb.docs.map((productDb) => {
+        return { id: productDb.id, ...productDb.data() }
+      })
+      setProducts(data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error)
+    }
+  };
+  const getProductsByCategory =async() => {
+    try{
+      const q = query(collection(db, "products"), where("category", "==", category))
+      const dataDb = await getDocs(q);
 
-
-const useProducts2 = (category) => { 
-   const [products, setProducts] = useState([]);
-   const [loading, setLoading] = useState(true);
-   useEffect(()=>{
-    setLoading(true)
-    getProducts()
-    .then((data) => {
-        if(category){
-            const productFilter= data.filter((product)=>product.category===category)
-            setProducts(productFilter)
-        }else{
-        setProducts(data);
-        }
-    })
-    .finally(()=>{
-        setLoading(false)
-    })
-   },[category]);
+       const data = dataDb.docs.map((productDb) => {
+        return { id: productDb.id, ...productDb.data() }
+      });
+      setProducts(data);
+      setLoading(false);
+    }    
+    catch(error){
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    getProductsByCategory ();
+  }, [category]);
   return { products, loading };
 };
 

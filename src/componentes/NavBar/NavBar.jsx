@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import logoNatura from "../../assets/img-logo.png";
+import logoNatura from "../../assets/natura-trans.png";
 import CarWidget from "../carWidget/CarWidget";
 import { Link } from "react-router-dom";
 const NavBar = () => {

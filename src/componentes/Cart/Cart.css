@@ -1,0 +1,40 @@
+.productcard{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px 0px ;
+}
+
+.imgcart{
+    width: 100px;
+    height: 100px;
+}
+.buton{
+    background-color: white;
+        border: 2px solid purple;
+        border-radius: 5px;
+        
+
+}
+.buton2{
+    background-color: white;
+        border: 2px solid purple;
+        border-radius: 5px;
+        width: 20%;
+        
+
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.buton3{
+    background-color: white;
+        border: 2px solid purple;
+        border-radius: 5px;
+        width: 12%;
+        
+
+}

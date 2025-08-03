@@ -5,9 +5,14 @@ import { ItemListWithSearch } from './componentes/itemList/ItemList';
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import { CardProvider } from './Context/CardContext';
+import Cart from './componentes/Cart/Cart';
+import Checkout from './componentes/checkOut/checkOut';
 function App() {
   return (
     <BrowserRouter>
+    <CardProvider>
+
       <div className='body'>
 
         <div className='cuerpo'>
@@ -24,12 +29,15 @@ function App() {
               <Route path="/" element={<ItemListWithSearch />} />
               <Route path="/category/:category" element={<ItemListContainer />} />
               <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+              <Route path="/cart" element = {<Cart />}/>
+              <Route path="/checkout" element = {<Checkout/>}/>
             </Routes>
             <Socialmedia />
           </div>
 
         </div>
       </div>
+    </CardProvider>
     </BrowserRouter>
 
   )

@@ -12,6 +12,7 @@
         height: 70px;
         margin: 10px;
         border-radius: 10px;
+        background-color: aliceblue;
     }
 
 }
@@ -32,13 +33,13 @@
 .cate a{
     text-decoration: none;
     border-radius: 15px;
-    color: orangered;
+    color:  #9e079e;;
     padding: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .cate a:hover{
-    background-color: darkred;
+    background-color: rgb(255, 112, 212);
     transform: rotateZ('1.05');
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }

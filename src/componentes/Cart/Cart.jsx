@@ -5,21 +5,27 @@ import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 const Cart = () => {
     const { cart, totalPrice, deleteProductById, clearCart } = useContext(CardContext)
-    const navigate = useNavigate();
-    const handleEmptyCart = () => {
-        if (cart.length === 0) {
-            Swal.fire({
-                icon: 'info',
-                title: 'Tu carrito está vacío',
-                text: 'Agrega productos para continuar tu compra',
-                confirmButtonColor: '#800080'
-            }).then(() => {
-            navigate('/');
-        });
-        } else {
-            navigate("/checkout");
-        }
-    };
+     const navigate = useNavigate();
+     useEffect (()=>{
+
+         if (cart.length === 0) {
+                 Swal.fire({
+                     icon: 'info',
+                     title: 'Tu carrito está vacío',
+                     text: 'Agrega productos para continuar tu compra',
+                     confirmButtonColor: '#800080'
+                 }).then(() => {
+                 navigate('/');
+             })
+            
+            }
+         
+     }, [cart, navigate]);
+
+     if (cart.length === 0) return null;
+     const handelClickForm = (event)=>{
+        navigate("/checkout");
+     }
 
     return (
         <div >
@@ -38,7 +44,7 @@ const Cart = () => {
             <p>Precio total de tu compra: ${totalPrice()} </p>
             <div className="buttons">
                 <button className="buton2" onClick={clearCart}>VACIAR CARRITO</button>
-                <button className="buton2" onClick={handleEmptyCart}>ENVIAR ORDEN</button>
+                <button className="buton2" onClick={handelClickForm} >ENVIAR ORDEN</button>
             </div>
         </div>
     );

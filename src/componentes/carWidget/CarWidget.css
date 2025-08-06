@@ -14,7 +14,7 @@
 .carrito {
     width: 3em;
     height: 3em;
-    color: black;
+    color: rgb(82, 2, 71);
     transition: transform 0.2s ease;
 }
 

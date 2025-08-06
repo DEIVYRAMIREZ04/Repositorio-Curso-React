@@ -22,7 +22,7 @@ const ResumenCompra = ({ orderId, resumen }) => {
       <li><strong>Email:</strong> ${buyer.email}</li>
     </ul>
     <p><strong>Productos:</strong></p>
-    <ul style="padding-left: 1em; margin: 0; line-height: 0;">
+    <ul style="padding-left: 1em; margin: 0; line-height: 1.5;">
       ${products.map(prod => `<li>${prod.name} x${prod.quantity} - $${prod.price * prod.quantity}</li>`)
         .join('')}
     </ul>

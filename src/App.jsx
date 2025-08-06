@@ -1,5 +1,6 @@
 import './App.css';
 import Socialmedia from "./componentes/SocialMedia/SocialMedia";
+import Error404 from './componentes/Error404/Error404';
 import { NavBar, NavBar2 } from "./componentes/NavBar/NavBar";
 import { ItemListWithSearch } from './componentes/itemList/ItemList';
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
@@ -31,6 +32,7 @@ function App() {
               <Route path="/detail/:productId" element={<ItemDetailContainer />} />
               <Route path="/cart" element = {<Cart />}/>
               <Route path="/checkout" element = {<Checkout/>}/>
+              <Route path="/error" element={<Error404/>} />
             </Routes>
             <Socialmedia />
           </div>

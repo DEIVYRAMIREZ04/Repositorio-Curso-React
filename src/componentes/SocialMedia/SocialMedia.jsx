@@ -5,12 +5,32 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const SocialMedia = () => {
   return (
-    <div>
-        <SlSocialInstagram  className="instagram"/>
-        <RiFacebookCircleLine  className="facebook"/>
-        <FaWhatsapp className="wsap"/>
-    </div>
-  )
-}
+    <div className="social-media">
+      <a
+        href="https://www.instagram.com/tucuenta" 
+        target="_blank"
+        rel="NA"
+      >
+        <SlSocialInstagram className="instagram" />
+      </a>
 
-export default SocialMedia
+      <a
+        href="https://www.facebook.com/tupagina" 
+        target="_blank"
+        rel="NA"
+      >
+        <RiFacebookCircleLine className="facebook" />
+      </a>
+
+      <a
+        href="https://wa.me/573001112222" 
+        target="_blank"
+        rel="NA"
+      >
+        <FaWhatsapp className="wsap" />
+      </a>
+    </div>
+  );
+};
+
+export default SocialMedia;

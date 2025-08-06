@@ -3,15 +3,26 @@ import { Link } from "react-router-dom";
 import ItemCount from "../Itemcount/ItemCount";
 import { useContext } from "react";
 import { CardContext } from "../../Context/CardContext";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"; 
 const ItemDetail = ({product = {}}) => {
   const {addProductInCart} = useContext(CardContext);
+  const navigate = useNavigate();
 
   const addProduct = (quantity)=>{
     const elementCart = { ...product, quantity }
     addProductInCart(elementCart);
-    
-//en q parte quantity  se convierte en una propiedad de la data
-  }
+    Swal.fire({
+      icon: "success",
+      title: "Producto agregado",
+      text: "¡Agregado correctamente al carrito!",
+      confirmButtonColor: "#800080",
+      confirmButtonText: "Aceptar",
+    }).then(() => {
+      navigate("/"); 
+    });
+  };
+  
   return (
     <div className="containerDetail">
       <div className="imgDetailContainer">

@@ -3,18 +3,24 @@ import { doc, getDoc } from "firebase/firestore";
 import db from "../db/db.js";
 
 const useProduct = (productId) => {
-    const [product, setProduct] = useState({});
+    const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
 const getporoduct =async () => {
     try {
        const docRef = doc(db, "products", productId); 
        const dataDb = await getDoc(docRef);
-
-       const data = {id: dataDb.id, ...dataDb.data()};
-       setProduct(data)
-       setLoading(false)
+        if (dataDb.exists()){
+            const data = {id: dataDb.id, ...dataDb.data()};
+            setProduct(data)
+        }else{
+            setProduct(null)
+        }
+       
     } catch (error) {
        console.log(error) 
+    }
+    finally{
+        setLoading(false)
     }
 }
 
